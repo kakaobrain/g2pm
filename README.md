@@ -1,6 +1,11 @@
 # g2pM
 A Neural Grapheme-to-Phoneme Conversion Package for MandarinChinese Based on a New Open Benchmark Dataset
 
+## Install
+```
+pip install g2pM
+```
+
 ## Dataset
 In data folder, there are [train/dev/test].sent files and [train/dev/test].lb files. In *.sent file, each lines corresponds to one sentence and a special symbol ▁ (U+2581) is added to the left and right of polyphonic character. The pronunciation of the corresponding character is at the same line from *.lb file. For each sentence, there could be several polyphonic characters, but we randomly choose only one polyphonic character to annotate.
 
@@ -36,3 +41,6 @@ In data folder, there are [train/dev/test].sent files and [train/dev/test].lb fi
 | pypinyin(0.36.0)     | 85.44                | 86.13           |
 | Majority Vote        | 92.15                | 92.08           |
 | Ours                 | **97.36**            | **97.31**       |
+
+
+## Reference

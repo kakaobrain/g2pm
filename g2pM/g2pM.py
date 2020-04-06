@@ -1,6 +1,7 @@
 import pickle
 
 import numpy as np
+import os
 
 UNK_TOKEN = "<UNK>"
 PAD_TOKEN = "<PAD>"
@@ -11,10 +12,10 @@ SPLIT_TOKEN = "▁"
 class G2pM(object):
     # one-layer bi-LSTM with two layered FC
     def __init__(self):
-        self.cedict = pickle.load(open('g2pM/digest_cedict.pkl', 'rb'))
-        self.char2idx = pickle.load(open('g2pM/char2idx.pkl', 'rb'))
-        class2idx = pickle.load(open('g2pM/class2idx.pkl', 'rb'))
-        state_dict = pickle.load(open('g2pM/np_ckpt.pkl', 'rb'))
+        self.cedict = pickle.load(open(os.path.dirname(os.path.abspath(__file__)) + '/digest_cedict.pkl', 'rb'))
+        self.char2idx = pickle.load(open(os.path.dirname(os.path.abspath(__file__)) + '/char2idx.pkl', 'rb'))
+        class2idx = pickle.load(open(os.path.dirname(os.path.abspath(__file__)) + '/class2idx.pkl', 'rb'))
+        state_dict = pickle.load(open(os.path.dirname(os.path.abspath(__file__)) + '/np_ckpt.pkl', 'rb'))
         
         self.load_variable(state_dict)
         self.idx2class = {idx: pron for pron, idx in class2idx.items()}
