@@ -45,3 +45,12 @@ In data folder, there are [train/dev/test].sent files and [train/dev/test].lb fi
 
 
 ## Reference
+```bibtex
+@article{Kyubyong2020g2pM,
+ author = {Kyubyong Park, Seanie Lee},
+ title = {A Neural Grapheme-to-Phoneme Conversion Package for MandarinChinese Based on a New Open Benchmark Dataset
+},
+ journal = {arXiv preprint},
+ year = {2020}
+}
+```
