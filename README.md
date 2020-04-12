@@ -47,7 +47,7 @@ In data folder, there are [train/dev/test].sent files and [train/dev/test].lb fi
 ## Reference
 To cite the code/data/paper, please use this BibTex
 ```bibtex
-@article{Kyubyong2020g2pM,
+@article{park2020g2pm,
  author = {Kyubyong Park, Seanie Lee},
  title = {A Neural Grapheme-to-Phoneme Conversion Package for MandarinChinese Based on a New Open Benchmark Dataset
 },
