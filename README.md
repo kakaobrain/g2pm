@@ -42,7 +42,7 @@ In data folder, there are [train/dev/test].sent files and [train/dev/test].lb fi
 | pypinyin(0.36.0)     | 85.44                | 86.13           |
 | Majority Vote        | 92.15                | 92.08           |
 | Chinese Bert         | **97.95**            | **97.85**       |
-| Ours                 | 97.36.               | 97.31.          |
+| Ours                 | 97.36                | 97.31           |
 
 
 ## Reference
