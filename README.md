@@ -1,5 +1,9 @@
 
 # g2pM
+[![Release](https://img.shields.io/badge/release-v0.1.2.4-green)](https://pypi.org/project/g2pM/)
+[![Downloads](https://pepy.tech/badge/g2pm)](https://pepy.tech/project/g2pm)
+[![license](https://img.shields.io/badge/license-Apache%202.0-red)](https://github.com/kakaobrain/g2pM/blob/master/LICENSE)
+
 This is the official repository of our paper [A Neural Grapheme-to-Phoneme Conversion Package for MandarinChinese Based on a New Open Benchmark Dataset](https://arxiv.org/abs/2004.03136).
 
 ## Install
