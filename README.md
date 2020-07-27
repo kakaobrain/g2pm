@@ -4,7 +4,7 @@
 [![Downloads](https://pepy.tech/badge/g2pm)](https://pepy.tech/project/g2pm)
 [![license](https://img.shields.io/badge/license-Apache%202.0-red)](https://github.com/kakaobrain/g2pM/blob/master/LICENSE)
 
-This is the official repository of our paper [A Neural Grapheme-to-Phoneme Conversion Package for MandarinChinese Based on a New Open Benchmark Dataset](https://arxiv.org/abs/2004.03136).
+This is the official repository of our paper [A Neural Grapheme-to-Phoneme Conversion Package for MandarinChinese Based on a New Open Benchmark Dataset](https://arxiv.org/abs/2004.03136) (**Interspeech 2020**).
 
 ## Install
 ```
@@ -56,7 +56,7 @@ To cite the code/data/paper, please use this BibTex
  author={Park, Kyubyong and Lee, Seanie},
  title = {A Neural Grapheme-to-Phoneme Conversion Package for MandarinChinese Based on a New Open Benchmark Dataset
 },
- journal = {arXiv preprint arXiv:2004.03136},
+ journal={Proc. Interspeech 2020},
  url = {https://arxiv.org/abs/2004.03136},
  year = {2020}
 }
