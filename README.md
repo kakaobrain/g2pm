@@ -32,7 +32,6 @@ If you want to split all the non Chinese characters (e.g. digit), set char_split
 ['ran', 'er', '，', 'ta', 'hong', 'le', '2', '0', 'nian', 'yi', 'hou', '，', 'ta', 'jing', 'tui', 'chu', 'le', 'da', 'jia', 'de', 'shi', 'xian', '。']
 >>> model(sentence, tone=True, char_split=True)
 ['ran2', 'er2', '，', 'ta1', 'hong2', 'le5', '2', '0', 'nian2', 'yi3', 'hou4', '，', 'ta1', 'jing4', 'tui4', 'chu1', 'le5', 'da4', 'jia1', 'de5', 'shi4', 'xian4', '。']
-```
 
 ```
 
