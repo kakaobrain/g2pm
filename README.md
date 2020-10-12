@@ -19,12 +19,21 @@ In data folder, there are [train/dev/test].sent files and [train/dev/test].lb fi
 * numpy
 
 ## Usage
+If you want to remove all the digits which denote the tones, set tone=False. Default setting is tone=True. <br />
+If you want to split all the non Chinese characters (e.g. digit), set char_split=True. Default setting is char_split=False. <br />
+
 ```
 >>> from g2pM import G2pM
 >>> model = G2pM()
 >>> sentence = "然而，他红了20年以后，他竟退出了大家的视线。"
->>> model(sentence)
+>>> model(sentence, tone=True, char_split=False)
 ['ran2', 'er2', '，', 'ta1', 'hong2', 'le5', '20', 'nian2', 'yi3', 'hou4', '，', 'ta1', 'jing4', 'tui4', 'chu1', 'le5', 'da4', 'jia1', 'de5', 'shi4', 'xian4', '。']
+>>> model(sentence, tone=False, char_split=False)
+['ran', 'er', '，', 'ta', 'hong', 'le', '2', '0', 'nian', 'yi', 'hou', '，', 'ta', 'jing', 'tui', 'chu', 'le', 'da', 'jia', 'de', 'shi', 'xian', '。']
+>>> model(sentence, tone=True, char_split=True)
+['ran2', 'er2', '，', 'ta1', 'hong2', 'le5', '2', '0', 'nian2', 'yi3', 'hou4', '，', 'ta1', 'jing4', 'tui4', 'chu1', 'le5', 'da4', 'jia1', 'de5', 'shi4', 'xian4', '。']
+```
+
 ```
 
 ## Model Size

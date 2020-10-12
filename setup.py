@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="g2pM",
-    version="0.1.2.4",
+    version="0.1.2.5",
     license='Apache License 2.0',
     author="Seanie Lee",
     author_email="lsnfamily02@gmail.com",

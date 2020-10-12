@@ -184,7 +184,7 @@ class G2pM(object):
 
         return preds
 
-    def __call__(self, sent):
+    def __call__(self, sent, char_split=False, tone=True):
         input_ids = []
         poly_indices = []
         pros_lst = []
@@ -203,7 +203,11 @@ class G2pM(object):
                     poly_indices.append(idx)
                     pros_lst.append(SPLIT_TOKEN)
                 else:
-                    pros_lst.append(prons[0])
+                    pron = prons[0]
+                    # remove the digit which denotes a tone
+                    if not tone:
+                        pron = pron[:-1]
+                    pros_lst.append(pron)
             else:
                 pros_lst.append(char)
 
@@ -224,18 +228,24 @@ class G2pM(object):
 
             for idx, pred in zip(poly_indices, preds):
                 pron = self.idx2class[pred]
+                if not tone:
+                    pron = pron[:-1]
                 pros_lst[idx] = pron
 
-        pron_str = ""
-        for pro in pros_lst:
-            if len(pro) == 1:
-                pron_str += pro
-            else:
-                if len(pron_str) > 0 and pron_str[-1] != "-":
-                    pro = "-" + pro
-                pron_str += pro + "-"
-        if pron_str[-1] == "-":
-            pron_str = pron_str[:-1]
-        ret = pron_str.split("-")
-        
-        return ret
+        if char_split:
+            return pros_lst
+        else:
+            pron_str = ""
+            delimiter = "|"
+            for pro in pros_lst:
+                if len(pro) == 1:
+                    pron_str += pro
+                else:
+                    if len(pron_str) > 0 and pron_str[-1] != delimiter:
+                        pro = delimiter + pro
+                    pron_str += pro + delimiter
+            if pron_str[-1] == delimiter:
+                pron_str = pron_str[:-1]
+            ret = pron_str.split(delimiter)
+            
+            return ret
