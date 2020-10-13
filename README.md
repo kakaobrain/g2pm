@@ -62,7 +62,7 @@ To cite the code/data/paper, please use this BibTex
 ```bibtex
 @article{park2020g2pm,
  author={Park, Kyubyong and Lee, Seanie},
- title = {A Neural Grapheme-to-Phoneme Conversion Package for MandarinChinese Based on a New Open Benchmark Dataset
+ title = {A Neural Grapheme-to-Phoneme Conversion Package for Mandarin Chinese Based on a New Open Benchmark Dataset
 },
  journal={Proc. Interspeech 2020},
  url = {https://arxiv.org/abs/2004.03136},
