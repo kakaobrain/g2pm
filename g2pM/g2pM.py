@@ -85,10 +85,16 @@ class G2pM(object):
         if_hh = ifgo_hh[:, :ifgo_hh.shape[-1] * 2 // 4]
         go_hh = ifgo_hh[:, ifgo_hh.shape[-1] * 2 // 4:]
 
-        if_gate = self.sigmoid(if_ih + if_hh)
+        # if_gate = self.sigmoid(if_ih + if_hh)
+        #
+        # i, f = if_gate[:, :if_gate.shape[-1] //
+        #                2], if_gate[:, if_gate.shape[-1] // 2:]
 
-        i, f = if_gate[:, :if_gate.shape[-1] //
-                       2], if_gate[:, if_gate.shape[-1] // 2:]
+        i_ih, f_ih = if_ih[:, :if_ih.shape[-1]//2], if_ih[:, if_ih.shape[-1]//2:]
+        i_hh, f_hh = if_hh[:, :if_hh.shape[-1]//2], if_hh[:, if_hh.shape[-1]//2:]
+
+        i = self.sigmoid(i_ih + i_hh)
+        f = self.sigmoid(f_ih + f_hh)
 
         g_ih, o_ih = go_ih[:, :go_ih.shape[-1] //
                            2], go_ih[:, go_ih.shape[-1] // 2:]
